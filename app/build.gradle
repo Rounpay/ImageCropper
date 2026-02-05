@@ -26,10 +26,15 @@ android {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
     }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
 }
 
 dependencies {
-
+    implementation fileTree(dir: 'libs', include: ['*.aar'])
     implementation libs.appcompat
     implementation libs.material
     implementation libs.activity
@@ -37,4 +42,30 @@ dependencies {
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
+    implementation(libs.play.services.ads)
+    implementation 'com.inmobi.monetization:inmobi-ads-kotlin:11.1.0'
+    implementation "androidx.media3:media3-exoplayer:1.9.0"
+    implementation 'com.google.android.gms:play-services-ads-identifier:18.3.0'
+    implementation 'androidx.browser:browser:1.9.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'androidx.core:core-ktx:1.17.0'
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.1"
+    implementation 'im.zego:zego_uikit_prebuilt_live_streaming_android:+'
+
+    implementation "live.100ms:android-sdk:2.9.79"    // Essential
+    implementation "live.100ms:video-view:2.9.79" // Essential
+    implementation "live.100ms:virtual-background:2.9.79" // Optional
+    implementation "live.100ms:hls-player-stats:2.9.79"   // Optional
+    implementation "live.100ms:hls-player:2.9.79"   // Optional
+
+    // ============================================================
+    //  EXOPLAYER — HLS Stream playback ke liye
+    // ============================================================
+    implementation 'androidx.media3:media3-exoplayer:1.9.1'
+    implementation 'androidx.media3:media3-exoplayer-hls:1.9.1'      // HLS support
+    implementation 'androidx.media3:media3-ui:1.9.1'
+    // PlayerView
+
+    ///Material
+    implementation "com.google.android.material:material:1.13.0"
 }

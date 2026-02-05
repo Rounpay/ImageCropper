@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/commonToolbar"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:layout_margin="10dp"
+    android:background="@drawable/bg_toolbar_round"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp"
+    android:descendantFocusability="blocksDescendants"
+    android:elevation="6dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnBack"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="start|center_vertical"
+        android:src="@drawable/outline_arrow_back_ios_new_24"
+        app:tint="@color/white" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtTitle"
+        android:fontFamily="sans-serif-condensed"
+        style="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Custom App Bar"
+        android:textColor="@android:color/white" />
+
+    <ImageView
+        android:id="@+id/btnFilter"
+        android:layout_width="24dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_height="24dp"
+        android:layout_gravity="end|center_vertical"
+        android:src="@drawable/vector__stroke_"
+        android:visibility="visible"/>
+
+</androidx.appcompat.widget.Toolbar>

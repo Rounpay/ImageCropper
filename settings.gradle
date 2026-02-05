@@ -9,6 +9,8 @@ pluginManagement {
         }
         mavenCentral()
         gradlePluginPortal()
+        maven { url 'https://maven.zego.im' }  // <- Add this line.
+        maven { url 'https://www.jitpack.io' } // <- Add this line.
     }
 }
 dependencyResolutionManagement {
@@ -16,8 +18,11 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url 'https://maven.zego.im' }  // <- Add this line.
+        maven { url 'https://www.jitpack.io' } // <- Add this line.
     }
 }
 
 rootProject.name = "My Application"
 include ':app'
+include ':app:mylibrary'

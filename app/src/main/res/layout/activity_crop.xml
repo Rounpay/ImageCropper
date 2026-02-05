@@ -43,5 +43,10 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="12dp"
             android:text="1:1" />
+
+
     </LinearLayout>
+
+
+
 </FrameLayout>

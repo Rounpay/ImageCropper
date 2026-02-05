@@ -23,6 +23,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.util.Stack;
 
 public class CropActivity extends AppCompatActivity {
     private ImageView imageView;
@@ -34,7 +35,6 @@ public class CropActivity extends AppCompatActivity {
     private float scaleFactor = 1f;
     Button btnRatio;
     CropOverlayView overlay;
-
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
